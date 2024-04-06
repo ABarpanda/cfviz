@@ -1,3 +1,5 @@
+//#region variables
+
 var api_url = 'https://codeforces.com/api/';
 var handle = '';
 
@@ -19,6 +21,7 @@ var titleTextStyle = {
   color: '#393939',
   bold: false
 };
+//#endregion
 
 google.charts.load('current', { packages: ['corechart', 'calendar'] });
 
@@ -32,7 +35,7 @@ $(document).ready(function () {
     handle = $('#handle').val().trim();
 
     if (!handle) {
-      err_message('handleDiv', 'Enter a name');
+      err_message('handleDiv', 'Please enter a name!');
       $('#mainSpinner').removeClass('is-active');
       return; // No handle is provided, we can't do anything.
     }
@@ -327,15 +330,14 @@ function drawCharts() {
 
   //Plotting the languages chart
   var colors = [
-    '#f44336',
-    '#E91E63',
-    '#9C27B0',
-    '#673AB7',
-    '#2196F3',
-    '#009688',
-    '#8BC34A',
-    '#CDDC39',
-    '#FFC107',
+    '#304FFE', //Ultramarine Blue
+    '#8BC34A', //Dollar Bill
+    '#673AB7', //Plump Purple
+    '#FFC107', //Mikado Yellow
+    '#2196F3', //Button Blue
+    '#9C27B0', //Dark Orchid
+    '#009688', //Dark Cyan
+    '#CDDC39', //Pear Yellow
     '#FF9800',
     '#FF5722',
     '#795548',
@@ -344,11 +346,12 @@ function drawCharts() {
     '#827717',
     '#004D40',
     '#1A237E',
-    '#6200EA',
-    '#3F51B5',
-    '#F50057',
-    '#304FFE',
-    '#b71c1c'
+    '#6200EA', //Electric Indigo
+    '#3F51B5', //Violet-Blue
+    '#F50057', //Folly
+    '#E91E63', //Razzmatazz
+    '#f44336', //Coral Red
+    '#b71c1c'  //Carnelian
   ];
 
   $('#langs').removeClass('hidden');
@@ -371,6 +374,7 @@ function drawCharts() {
   langChart.draw(langs, langOptions);
 
   //the tags chart
+  
   $('#tags').removeClass('hidden');
   var tagTable = [];
   for (var tag in tags) {

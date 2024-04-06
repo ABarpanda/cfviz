@@ -23,7 +23,6 @@ header {
     z-index: 10;
 }
 
-
 /*
 @media only screen and (min-width: 1025px) {
     #mainSpinner {
@@ -43,7 +42,7 @@ header {
     margin: 10px auto;
     overflow-y: hidden;
     overflow-x: auto;
-    background: #fff;
+    background-color: #fff;
 }
 
 .card,
@@ -300,8 +299,8 @@ body {
 }
 
 .layout .navigation .mdl-navigation__link:hover {
-    background-color: #00BCD4;
-    color: #37474F;
+    background-color: #0031d4;
+    color: aliceblue;
 }
 
 .navigation .mdl-navigation__link .material-icons {
@@ -313,3 +312,25 @@ body {
 .content {
     max-width: 1080px;
 }
+
+/* .mdl-button{
+    color: aliceblue;
+} 
+
+rect{
+    fill : #37474f;
+}
+
+g rect{
+    fill: #3f51b5;
+}
+
+g text {
+    fill: #fff;
+} 
+// If I apply the above modifications, this happens:-
+https://ibb.co/PD8bJfG
+https://ibb.co/r6RXkXk
+https://ibb.co/BNW77X1
+https://ibb.co/64fBLGv
+*/
