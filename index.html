@@ -40,6 +40,7 @@
         <span class="mdl-layout-title">Codeforces Visualizer</span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i> Home <span class="mdl-ripple"></span></a>
           <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i> Home <span class="mdl-ripple"></span></a>
           <a href="compare.html" class="mdl-button mdl-js-button mdl-js-ripple-effect"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">compare</i> Compare<span class="mdl-ripple"></span></a>
           <a href="virtual-rating-change.html" class="mdl-button mdl-js-button mdl-js-ripple-effect"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i> Virtual Rating Change<span class="mdl-ripple"></span></a>
@@ -237,6 +238,7 @@
 
     function toggleMode() {
       var mybutton = document.getElementById('change');
+      // share.classList.remove("hidden")
       if (mybutton.textContent === 'ON') {
         dark();
       } else {
@@ -305,6 +307,30 @@
     document.getElementById('change').addEventListener('click', function() {
       toggleMode();
     });
+
+    // DarkReader.enable({
+    //     brightness: 100,
+    //     contrast: 90,
+    //     sepia: 10
+    // });
+
+    // DarkReader.disable();
+
+    // // Enable when the system color scheme is dark.
+    // DarkReader.auto({
+    //     brightness: 100,
+    //     contrast: 90,
+    //     sepia: 10
+    // });
+
+    // // Stop watching for the system color scheme.
+    // DarkReader.auto(false);
+
+    // // Get the generated CSS of Dark Reader returned as a string.
+    // const CSS = await DarkReader.exportGeneratedCSS();
+
+    // // Check if Dark Reader is enabled.
+    // const isEnabled = DarkReader.isEnabled();
   </script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
